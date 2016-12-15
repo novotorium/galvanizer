@@ -4,7 +4,7 @@ require 'open-uri'
 # load 'glassfrog.rb';
 class GlassFrog
   API_KEY='57b5e66171808486162a65ce1529e53afeca3002'
-  API_URL='https://glassfrog.holacracy.org/api/v3/'
+  API_URL='https://api.glassfrog.com/api/v3/'
   def request(method, params)
     if params.is_a?(Fixnum)
       uri = API_URL+method+"/"+params.to_s+"?api_key=#{API_KEY}"
