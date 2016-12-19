@@ -1,0 +1,151 @@
+
+#footer {
+  margin: 0;
+  background-color: #286CB3;
+  border: NaNpx solid #286CB3;
+  color: white;
+  width: 100%;
+  font-family: 'Maison Neue', Helvetica, Arial, sans-serif;
+  h2 {
+    padding-top: 25px;
+    padding-bottom: 30px;
+    font-weight: bold;
+    font-size: 2.5em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  .banner-contacts {
+    padding-left: 2%;
+    padding-bottom: 70px;
+    li {
+      text-align: left;
+      width: 22%;
+      font-weight: 300;
+      font-size: 110%;
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+  .banner-social-buttons {
+    padding-bottom: 80px;
+  }
+}
+
+@media (max-width: 1130px) {
+  #footer {
+    .banner-contacts {
+      padding-left: 0;
+      li {
+        width: 40%;
+        padding-left: 10%;
+        padding-bottom: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  #footer {
+    .banner-contacts {
+      padding-left: 0;
+      li {
+        text-align: center;
+        width: 100%;
+        padding-left: 0%;
+        padding-bottom: 40px;
+      }
+      li:first-child {
+        padding-bottom: 30px;
+      }
+    }
+  }
+}
+
+.smGlobalBtn {
+  /* global button class */
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  padding: 0px;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  font-size: 25px;
+  font-weight: normal;
+  line-height: 2em;
+  border-radius: 25px;
+  -moz-border-radius: 25px;
+  -webkit-border-radius: 25px;
+  background: #FEFEFE;
+  color: #333333;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+/* Youtube button class*/
+
+.youtubeBtn {
+  &:before {
+    /* use :before to add the relevant icons */
+    font-family: "FontAwesome";
+    content: "\f167";
+  }
+  &:hover {
+    background: #fff;
+  }
+}
+
+/* facebook button class*/
+
+.facebookBtn {
+  &:before {
+    /* use :before to add the relevant icons */
+    font-family: "FontAwesome";
+    content: "\f09a";
+  }
+  &:hover {
+    background: #fff;
+  }
+}
+
+/* twitter button class*/
+
+.twitterBtn {
+  &:before {
+    font-family: "FontAwesome";
+    content: "\f099";
+  }
+  &:hover {
+    background: #fff;
+  }
+}
+
+/* instagram button class*/
+
+.instagramBtn {
+  &:before {
+    font-family: "FontAwesome";
+    content: "\f16d";
+  }
+  &:hover {
+    background: #fff;
+  }
+}
+
+/* snapchat button class*/
+
+.snapchatBtn {
+  &:before {
+    font-family: "FontAwesome";
+    content: "\f2ac";
+  }
+  &:hover {
+    background: #fff;
+  }
+}

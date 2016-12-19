@@ -1,0 +1,109 @@
+$main-font: "Montserrat",  sans-serif;
+
+$main: #71BCFF;
+$main-highlight: #A8D6FF;
+$main-shade: #568FC2;
+$secondary: #D9FF71;
+$tertiary: #71FF8D;
+
+$dark: #2B2D2E;
+$mid: #4D5456;
+$light: #A9AFB3;
+$white: #FFFFFF;
+$overlay: #000000;
+
+$menu-height: 72px;
+
+body {
+  font-family: $main-font;
+  color: $dark;
+  font-size: 62.5%;
+}
+@media (min-width: 1440px){
+  .container {
+    min-width: 1440px;
+  }
+}
+.row.header, .row.footer{
+  font-size: 2em;
+}
+.navbar-brand{
+  font-size: 2em;
+  font-weight: bold;
+  height: 70px;
+  line-height: initial;
+  color: white;
+}
+.navbar-default .navbar-brand {
+  color: white;
+}
+.navbar {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 0px;
+  border: 0px solid transparent;
+  color: white;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: white;
+  background-color: #286CB3;
+
+}
+.navbar-nav > li > a {
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  line-height: 50px;
+}
+.navbar-default {
+  background-color: #286CB3;
+    color: white;
+}
+.navbar-default .navbar-nav > li > a {
+  color: white;
+
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #777;
+  background-color: transparent;
+}
+.navbar-right {
+
+   font-weight: bold;
+   color: white;
+
+
+   a{
+     height: 70px;
+     text-align: center;
+     font-size: 1.2em;
+   }
+   li{
+     margin-right: 20px;
+     height: 70px;
+   }
+   li.last{
+     margin-right: 0px;
+   }
+
+
+}
+.row.header{
+  z-index: 1;
+  background-color: #286CB3;
+  position: fixed;
+  top: 0;
+  height: 70px;
+  width: 100%;
+
+  img{
+
+  }
+}
+.row.content{
+  width: 960px;
+  margin-bottom: 8em;
+}
+#header{
+  background-color: #286CB3;
+}
