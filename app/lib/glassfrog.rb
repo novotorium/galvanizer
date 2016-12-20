@@ -1,9 +1,8 @@
 require 'uri'
 require 'json'
 require 'open-uri'
-# load 'glassfrog.rb';
 class GlassFrog
-  API_KEY='57b5e66171808486162a65ce1529e53afeca3002'
+  API_KEY=ENV['GLASSFROG_API_KEY']
   API_URL='https://api.glassfrog.com/api/v3/'
   def request(method, params)
     if params.is_a?(Fixnum)
