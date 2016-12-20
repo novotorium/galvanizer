@@ -14,12 +14,16 @@ class GlassFrog
       uri = API_URL+method+"?api_key=#{API_KEY}&"+params.to_s
     end
     begin
-      response = JSON.load(open(uri))
-      # puts response
-      response
+      fetch_data(uri)
     rescue Exception => e
       puts uri
       puts e.message
+    end
+  end
+
+  def fetch_data(uri)
+    Rails.cache.fetch("#{uri}", expires_in: 12.hours) do
+      JSON.load(open(uri))
     end
   end
 
