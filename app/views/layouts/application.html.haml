@@ -15,3 +15,9 @@
         = yield
         / %div.row.footer
         /   = render :partial => 'layouts/footer'
+
+        // improve: inherit dimensions
+        / %canvas.animated{:height => "1000", :width => "2800"} 
+        %canvas.animated
+
+= javascript_include_tag 'particles.js'
