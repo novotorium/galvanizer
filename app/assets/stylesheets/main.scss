@@ -19,90 +19,35 @@ body {
   color: $dark;
   font-size: 62.5%;
 }
-@media (min-width: 1440px){
-  .container {
-    min-width: 1440px;
-  }
-}
+
 .row.header, .row.footer{
   font-size: 2em;
 }
-.navbar-brand{
-  font-size: 2em;
-  font-weight: bold;
-  height: 70px;
-  line-height: initial;
-  color: white;
-}
-.navbar-default .navbar-brand {
-  color: white;
-}
-.navbar {
-  position: relative;
-  min-height: 50px;
-  margin-bottom: 0px;
-  border: 0px solid transparent;
-  color: white;
-}
-.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: white;
-  background-color: #286CB3;
 
-}
-.navbar-nav > li > a {
-  color: white;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  line-height: 50px;
-}
-.navbar-default {
-  background-color: #286CB3;
-    color: white;
-}
-.navbar-default .navbar-nav > li > a {
-  color: white;
-
-}
-.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  color: #777;
-  background-color: transparent;
-}
-.navbar-right {
-
-   font-weight: bold;
-   color: white;
-
-
-   a{
-     height: 70px;
-     text-align: center;
-     font-size: 1.2em;
-   }
-   li{
-     margin-right: 20px;
-     height: 70px;
-   }
-   li.last{
-     margin-right: 0px;
-   }
-
-
-}
 .row.header{
-  z-index: 1;
   background-color: #286CB3;
-  position: fixed;
-  top: 0;
   height: 70px;
   width: 100%;
-
-  img{
-
-  }
 }
 .row.content{
-  width: 960px;
+  width: 100%;
   margin-bottom: 8em;
+}
+.navbar-default{
+  background-color: #286CB3;
+  height: 70px;
+}
+.navbar-default .navbar-brand {
+   color: white;
+   padding-top: 25px;
+}
+.navbar-default .navbar-nav > li > a{
+   color: white;
+   padding-top: 25px;
+}
+.row.header{
+  margin-left: 0px;
+  margin-right: 0px;
 }
 #header{
   background-color: #286CB3;
