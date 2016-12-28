@@ -10,10 +10,9 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
     %body
 
-      %div.row.header
+      %div.header
         = render :partial => 'layouts/header'
-      %div.row.content
-        %div.container
-          = yield
-      %div.row.footer
+      %div.container
+        = yield
+      %footer.footer
         = render :partial => 'layouts/footer'
