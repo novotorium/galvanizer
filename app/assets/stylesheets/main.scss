@@ -20,17 +20,16 @@ body {
   font-size: 62.5%;
 }
 
-.row.header, .row.footer{
+.header, footer{
   font-size: 2em;
 }
 
-.row.header{
+.header{
   background-color: #286CB3;
   height: 70px;
   width: 100%;
 }
-.row.content{
-  width: 100%;
+.container{
   margin-bottom: 8em;
 }
 .navbar-default{
@@ -45,10 +44,7 @@ body {
    color: white;
    padding-top: 25px;
 }
-.row.header{
+.header{
   margin-left: 0px;
   margin-right: 0px;
-}
-#header{
-  background-color: #286CB3;
 }
