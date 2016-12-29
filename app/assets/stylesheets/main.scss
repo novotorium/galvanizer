@@ -1,6 +1,6 @@
 $main-font: "Montserrat",  sans-serif;
 
-$main: #71BCFF;
+$main: #286CB3;
 $main-highlight: #A8D6FF;
 $main-shade: #568FC2;
 $secondary: #D9FF71;
@@ -25,7 +25,7 @@ body {
   font-weight: bolder;
 }
 #navbar {
-  background-color: #286CB3;
+  background-color: $main;
 }
 .navbar{
   min-height: 4.1em;
@@ -38,18 +38,18 @@ body {
           background-color: white;
         }
         &:hover{
-          background-color: #286CB3;
+          background-color: $main;
         }
       }
     }
   }
 }
 .header{
-  background-color: #286CB3;
+  background-color: $main;
   width: 100%;
 }
-.navbar-default{
-  background-color: #286CB3;
+.navbar-default, .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: $main;
 }
 .navbar-default .navbar-brand, .navbar-default .navbar-brand:hover {
   color: white;
