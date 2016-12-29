@@ -23,10 +23,26 @@ body {
 .header, footer{
   font-size: 2em;
 }
-
+#navbar {
+  background-color: #286CB3;
+}
+.navbar{
+  .container-fluid{
+    .navbar-header{
+      button{
+        border: 0px;
+        span.icon-bar {
+          background-color: white;
+        }
+        &:hover{
+          background-color: #286CB3;
+        }
+      }
+    }
+  }
+}
 .header{
   background-color: #286CB3;
-  height: 70px;
   width: 100%;
 }
 .container{
@@ -34,15 +50,12 @@ body {
 }
 .navbar-default{
   background-color: #286CB3;
-  height: 70px;
 }
 .navbar-default .navbar-brand {
-   color: white;
-   padding-top: 25px;
+  color: white;
 }
 .navbar-default .navbar-nav > li > a{
-   color: white;
-   padding-top: 25px;
+  color: white;
 }
 .header{
   margin-left: 0px;
