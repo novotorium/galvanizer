@@ -65,3 +65,49 @@ body {
   margin-left: 0px;
   margin-right: 0px;
 }
+.purpose-content, .strategy-content{
+  background-color: #262626;
+  opacity: 0.95;
+  color: white;
+  .text {
+    padding-left: 5.5em;
+    padding-right: 5.5em;
+    padding-top: 7em;
+    padding-bottom: 7em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .triangle-left:after{
+    border-right: 7em solid #0099CC;
+    border-bottom: 4em solid transparent;
+    border-top: 4em solid transparent;
+    bottom: 45%;
+    content: "";
+    position: absolute;
+    right: 0%;
+    margin-right: -2em;
+    width: 0;
+    height: 0;
+  }
+  .triangle-right:after{
+    border-left: 7em solid #0099CC;
+    border-bottom: 4em solid transparent;
+    border-top: 4em solid transparent;
+    bottom: 45%;
+    content: "";
+    position: absolute;
+    left: 0%;
+    margin-left: -2em;
+    width: 0;
+    height: 0;
+  }
+  .space {
+    background-color: white;
+  }
+  h1{
+    font-size: 4.35em;
+  }
+}
+.top-line{
+  border-top: 3px solid white;
+}
