@@ -48,6 +48,9 @@ body {
   background-color: $main;
   width: 100%;
 }
+.navbar-default{
+  border:0px;
+}
 .navbar-default, .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
   background-color: $main;
 }
