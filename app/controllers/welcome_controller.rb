@@ -1,7 +1,6 @@
 require 'glassfrog'
 class WelcomeController < ApplicationController
   def index
-    render plain: 'Hello world'
   end
 
   def circles
