@@ -70,6 +70,28 @@ body {
   opacity: 0.9;
   color: white;
   .text {
+    ul{
+      list-style: none;
+      li{
+        padding-left: 1.5em;
+        padding-bottom: 1em;
+      }
+      li:before{
+        font-family: Verdana;
+        display: inline-block;
+        margin-left: -1.5em; /* same as padding-left set on li */
+        width: 1.5em; /* same as padding-left set on li */
+      }
+      li:nth-child(1):before{
+        content: "\25C6"; /* UTF-8 Unicode */
+      }
+      li:nth-child(2):before{
+        content: "\25FC"; /* UTF-8 Unicode */
+      }
+      li:nth-child(3):before{
+        content: "\f111"; /* UTF-8 Unicode */
+      }
+    }
     padding-left: 5.5em;
     padding-right: 5.5em;
     padding-top: 7em;
@@ -83,7 +105,7 @@ body {
       padding: .6em;
       font-size: 1.8em;
       position: relative;
-      bottom: -2em;
+      bottom: -1.5em;
     }
   }
   .triangle-left:after{
