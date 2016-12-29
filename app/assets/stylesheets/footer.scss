@@ -6,13 +6,9 @@
   width: 100%;
   font-family: 'Montserrat', Helvetica, Arial, sans-serif;
   h2 {
-    padding-top: 25px;
-    padding-bottom: 30px;
-    font-weight: bold;
-    font-size: 2.5em;
-  }
-  h3 {
-    font-size: 1.5em;
+    padding-top: 4.4em;
+    margin: 0;
+    padding-bottom: 0.5em;
   }
   .banner-contacts {
     padding-left: 2%;
@@ -21,7 +17,7 @@
       text-align: left;
       width: 22%;
       font-weight: 300;
-      font-size: 110%;
+      font-size: 1em;
       a {
         color: white;
         text-decoration: none;
@@ -29,7 +25,7 @@
     }
   }
   .banner-social-buttons {
-    padding-bottom: 80px;
+    padding-bottom: 12em;
   }
 }
 

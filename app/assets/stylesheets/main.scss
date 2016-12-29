@@ -12,21 +12,23 @@ $light: #A9AFB3;
 $white: #FFFFFF;
 $overlay: #000000;
 
-$menu-height: 72px;
+$menu-height: 70px;
 
 body {
   font-family: $main-font;
   color: $dark;
-  font-size: 62.5%;
+  font-size: 1.6vmin;
 }
 
-.header, footer{
-  font-size: 2em;
+.navbar-brand, #footer > .row > .col-lg-12 > h2{
+  font-size: 2.15em;
+  font-weight: bolder;
 }
 #navbar {
   background-color: #286CB3;
 }
 .navbar{
+  min-height: 4.1em;
   margin-bottom: 0px;
   .container-fluid{
     .navbar-header{
@@ -52,7 +54,8 @@ body {
 .navbar-default .navbar-brand {
   color: white;
 }
-.navbar-default .navbar-nav > li > a{
+.navbar-default .navbar-nav > li > a, #footer > .row > .col-lg-12 > h3{
+  font-size: 1.25em;
   color: white;
 }
 .header{
