@@ -1,0 +1,64 @@
+$main-font: "Montserrat",  sans-serif;
+
+$main: #71BCFF;
+$main-highlight: #A8D6FF;
+$main-shade: #568FC2;
+$secondary: #D9FF71;
+$tertiary: #71FF8D;
+
+$dark: #2B2D2E;
+$mid: #4D5456;
+$light: #A9AFB3;
+$white: #FFFFFF;
+$overlay: #000000;
+
+$menu-height: 70px;
+
+body {
+  font-family: $main-font;
+  color: $dark;
+  font-size: 1.6vmin;
+}
+
+.navbar-brand, #footer > .row > .col-lg-12 > h2{
+  font-size: 2.15em;
+  font-weight: bolder;
+}
+#navbar {
+  background-color: #286CB3;
+}
+.navbar{
+  min-height: 4.1em;
+  margin-bottom: 0px;
+  .container-fluid{
+    .navbar-header{
+      button{
+        border: 0px;
+        span.icon-bar {
+          background-color: white;
+        }
+        &:hover{
+          background-color: #286CB3;
+        }
+      }
+    }
+  }
+}
+.header{
+  background-color: #286CB3;
+  width: 100%;
+}
+.navbar-default{
+  background-color: #286CB3;
+}
+.navbar-default .navbar-brand, .navbar-default .navbar-brand:hover {
+  color: white;
+}
+.navbar-default .navbar-nav > li > a, #footer > .row > .col-lg-12 > h3{
+  font-size: 1.25em;
+  color: white;
+}
+.header{
+  margin-left: 0px;
+  margin-right: 0px;
+}
