@@ -51,7 +51,7 @@ body {
 .navbar-default{
   background-color: #286CB3;
 }
-.navbar-default .navbar-brand {
+.navbar-default .navbar-brand, .navbar-default .navbar-brand:hover {
   color: white;
 }
 .navbar-default .navbar-nav > li > a, #footer > .row > .col-lg-12 > h3{
