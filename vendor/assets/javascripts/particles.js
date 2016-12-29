@@ -4,8 +4,8 @@
 var canvas = document.querySelector("canvas.animated"),
     context = canvas.getContext("2d"),
     radius = 2.5,
-    minDistance = 80,
-    maxDistance = 100,
+    minDistance = 2,
+    maxDistance = 250,
     minDistance2 = minDistance * minDistance,
     maxDistance2 = maxDistance * maxDistance;
 
@@ -16,7 +16,7 @@ var width = canvas.width,
     height = canvas.height
 
 var tau = 2 * Math.PI,
-    n = 100,
+    n = Math.round($(window).width()/25),
     particles = new Array(n);
 
 for (var i = 0; i < n; ++i) {
