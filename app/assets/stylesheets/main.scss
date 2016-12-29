@@ -76,6 +76,14 @@ body {
     padding-bottom: 7em;
     margin-top: 0px;
     margin-bottom: 0px;
+    button{
+      background-color: $main;
+      border: 0;
+      padding: .6em;
+      font-size: 1.8em;
+      position: relative;
+      bottom: -2em;
+    }
   }
   .triangle-left:after{
     border-right: 7em solid #0099CC;
