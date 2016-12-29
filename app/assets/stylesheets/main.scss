@@ -27,6 +27,7 @@ body {
   background-color: #286CB3;
 }
 .navbar{
+  margin-bottom: 0px;
   .container-fluid{
     .navbar-header{
       button{
@@ -44,9 +45,6 @@ body {
 .header{
   background-color: #286CB3;
   width: 100%;
-}
-.container{
-  margin-bottom: 8em;
 }
 .navbar-default{
   background-color: #286CB3;
