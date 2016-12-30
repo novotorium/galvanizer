@@ -69,6 +69,13 @@ body {
   background-color: #262626;
   opacity: 0.9;
   color: white;
+  .circles{
+    svg {
+    }
+    tspan{
+      font-size: .8em;
+    }
+  }
   .text {
     ul{
       list-style: none;

@@ -6,6 +6,7 @@
     %br
     %br
     %p Scelerisque ad vitae a adipiscing dictumst justo suspendisse ut hac ullamcorper tristique sodales nec parturient est taciti proin euismod a condimentum. Nunc adipiscing erat diam mollis a elit cras dis commodo ut consectetur consectetur a parturient. Curabitur nulla in odio etiam in condimentum cursus fermentum a parturient aptent sociosqu vestibulum.
-  .col-lg-6.text{ 'data-matchHeights': "A"}
-    %a{:href => "https://www.glassfrog.com"}
-      = image_tag 'roles-circle.png', class: 'img-responsive'
+  .col-lg-6.circles{ 'data-matchHeights': "A"}
+    %svg{ width: '45em', height: '45em' }
+%script{ src: "https://d3js.org/d3.v4.js" }
+= javascript_include_tag 'circles.js'
