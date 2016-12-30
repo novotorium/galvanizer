@@ -158,20 +158,33 @@ function circles() {
 circles();
 // Prefetching roles where accountabilities data lives.
 (function(){
+  //Prefetch accountabilities
   if(!window.roles)
-    {
-      d3.json("/roles.json", function(error, data){
-        if(error) { throw error; }
-        window.roles = data;
-      });
-    }
-    var id;
-    $( window ).on('resize', function() {
-      clearTimeout(id);
-      id = setTimeout(doneResizing, 200);
+  {
+    d3.json("/roles.json", function(error, data){
+      if(error) { throw error; }
+      window.roles = data;
     });
-    function doneResizing(){
-      $("svg").empty();
-      circles();
-    }
+  }
+  var id;
+  $( window ).on('resize', function() {
+    clearTimeout(id);
+    id = setTimeout(doneResizing, 200);
+  });
+  function doneResizing(){
+    $("svg").empty();
+    circles();
+  }
+  // We modify the modal on join
+  $("button#join").on('click', function(){
+    $(".modal-body .row:nth(0) .col-lg-12").addClass("col-lg-6").removeClass("col-lg-12");
+    $(".modal-body .row:nth(1)").fadeIn();
+    $("button#join").fadeOut();
+  });
+  // We set the modal back on close
+  $("#modal").on('hidden.bs.modal', function(){
+    $(".modal-body .row:nth(0) .col-lg-6").addClass("col-lg-12").removeClass("col-lg-6");
+    $(".modal-body .row:nth(1)").fadeOut();
+    $("button#join").fadeIn();
+  });
 })();
