@@ -14,10 +14,13 @@ $overlay: #000000;
 
 $menu-height: 70px;
 
+html {
+  font-size: 1vw;
+}
 body {
   font-family: $main-font;
   color: $dark;
-  font-size: 1.6vmin;
+  font-size: 1em;
 }
 
 .navbar-brand, #footer > .row > .col-lg-12 > h2{
@@ -73,7 +76,7 @@ body {
     padding-right: 0px;
     padding-left: 0px;
     tspan{
-      font-size: 1.1em;
+      font-size: 1em;
     }
   }
   .text {

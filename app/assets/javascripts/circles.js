@@ -1,8 +1,9 @@
 (function() {
   var svg = d3.select("svg"),
     margin = 20,
-      diameter = svg.style("height").slice(0,-2),
+      diameter = svg.style("width").slice(0,-2),
         g = svg.append("g").attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
+        svg.attr('height', diameter);
 
 
         var pack = d3.pack()
@@ -100,6 +101,9 @@
               .style("fill-opacity", function(d) { return d.parent === root ? 1 : 0; })
               .style("display", function(d) { return d.parent === root ? "inline" : "none"; })
               .attr("clip-path", function(d) { return "url(#clip-" + d.id + ")"; })
+              .style("font-size", function(d) {
+                return Math.floor(d.r/3.5);
+              })
               .on("click", openRole)
               .selectAll("tspan")
               .data(function(d) { return d.data.name.split(" "); })
