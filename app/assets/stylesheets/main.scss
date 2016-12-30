@@ -1,63 +1,67 @@
-$main-font: 'Montserrat',  sans-serif;
+$main-font: 'montserrat',  sans-serif;
 
 $main: #286cb3;
 $main-highlight: #a8d6ff;
 $main-shade: #568fc2;
 $secondary: #d9ff71;
-$tertiary: #71ff8D;
+$tertiary: #71ff8d;
 
-$dark: #2B2D2E;
-$mid: #4D5456;
-$light: #A9AFB3;
-$white: #FFFFFF;
-$overlay: #000000;
+$dark: #2b2d2e;
+$mid: #4d5456;
+$light: #a9afb3;
+$white: #fff;
+$overlay: #000;
 
 $menu-height: 70px;
 
 html {
   font-size: 1vw;
-  @media (max-width:800px){
+  @media (max-width: 800px) {
     font-size: 2vw;
   }
 }
+
 body {
-  font-family: $main-font;
   color: $dark;
+  font-family: $main-font;
   font-size: 1em;
 }
 
-.navbar-brand, #footer > .row > .col-lg-12 > h2{
+.navbar-brand,
+#footer > .row > .col-lg-12 > h2 {
   font-size: 1.88em;
   font-weight: bolder;
 }
+
 #navbar {
   background-color: $main;
 }
-.navbar{
+
+.navbar {
   min-height: 3.65em;
   margin-bottom: 0px;
-  .container-fluid{
+  .container-fluid {
     padding-left: 2.95em;
     padding-right: 2.95em;
     padding-top: 0.4em;
-    .navbar-header{
-      button{
+    .navbar-header {
+      button {
         border: 0px;
         span.icon-bar {
           background-color: white;
         }
-        &:hover{
+        &:hover {
           background-color: $main;
         }
       }
     }
   }
 }
-.header{
+.header {
   background-color: $main;
   width: 100%;
 }
-.navbar-default{
+.navbar-default {
   border-bottom:1px solid white;
 }
 .navbar-default, .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
@@ -66,46 +70,46 @@ body {
 .navbar-default .navbar-brand, .navbar-default .navbar-brand:hover {
   color: white;
 }
-.navbar-default .navbar-nav > li > a, #footer > .row > .col-lg-12 > h3{
+.navbar-default .navbar-nav > li > a, #footer > .row > .col-lg-12 > h3 {
   font-size: 1.1em;
   color: white;
 }
-.header{
+.header {
   margin-left: 0px;
   margin-right: 0px;
 }
-[class*=-content]{
+[class*=-content] {
   background-color: #262626;
   opacity: 0.9;
   color: white;
-  .circles{
+  .circles {
     padding-right: 0px;
     padding-left: 0px;
-    tspan{
+    tspan {
       font-size: 1em;
     }
   }
   .text {
-    ul{
+    ul {
       list-style: none;
-      li{
+      li {
         padding-left: 1.5em;
         padding-bottom: 1em;
       }
-      li:before{
-        font-family: Verdana;
+      li:before {
+        font-family: verdana;
         display: inline-block;
         margin-left: -1.5em; /* same as padding-left set on li */
         width: 1.5em; /* same as padding-left set on li */
       }
-      li:nth-child(1):before{
-        content: '\25C6'; /* UTF-8 Unicode */
+      li:nth-child(1):before {
+        content: '\25c6'; /* utf-8 unicode */
       }
-      li:nth-child(2):before{
-        content: '\25FC'; /* UTF-8 Unicode */
+      li:nth-child(2):before {
+        content: '\25fc'; /* utf-8 unicode */
       }
-      li:nth-child(3):before{
-        content: '\f111'; /* UTF-8 Unicode */
+      li:nth-child(3):before {
+        content: '\f111'; /* utf-8 unicode */
       }
     }
     padding-left: 4.9em;
@@ -114,7 +118,7 @@ body {
     padding-bottom: 6.7em;
     margin-top: 0px;
     margin-bottom: 0px;
-    .button{
+    .button {
       color: white;
       background-color: $main;
       border: 0;
@@ -124,8 +128,8 @@ body {
       bottom: -1.5em;
     }
   }
-  .triangle-left:after{
-    border-right: 7em solid #0099CC;
+  .triangle-left:after {
+    border-right: 7em solid #0099cc;
     border-bottom: 4em solid transparent;
     border-top: 4em solid transparent;
     bottom: 45%;
@@ -136,8 +140,8 @@ body {
     width: 0;
     height: 0;
   }
-  .triangle-right:after{
-    border-left: 7em solid #0099CC;
+  .triangle-right:after {
+    border-left: 7em solid #0099cc;
     border-bottom: 4em solid transparent;
     border-top: 4em solid transparent;
     bottom: 45%;
@@ -154,8 +158,8 @@ body {
   .space.mobile {
     min-height: 20em;
   }
-  .triangle-bottom:after{
-    border-top: 7em solid #0099CC;
+  .triangle-bottom:after {
+    border-top: 7em solid #0099cc;
     border-right: 4em solid transparent;
     border-left: 4em solid transparent;
     left: 44%;
@@ -166,19 +170,19 @@ body {
     width: 0;
     height: 0;
   }
-  h1{
+  h1 {
     margin-bottom: 0.36em;
     font-size: 3.75em;
     font-weight: bold;
   }
-  h2{
+  h2 {
     font-size: 1.57em;
   }
-  p{
+  p {
     font-size: 1.1em;
   }
 }
-.top-line{
+.top-line {
   border-top: 2px solid white;
   padding-top: 0.2em;
 }
