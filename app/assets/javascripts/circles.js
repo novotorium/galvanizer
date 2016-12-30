@@ -25,10 +25,10 @@ function circles() {
           }, data);
 
           // Delete repated roles
-          for(let role of data.linked.supported_roles){
+          for(var i = data.linked.supported_roles.length -1; i>= 0; index--){
             for(var index = data.linked.roles.length -  1; index >= 0; index--)
             {
-              if(role.id === data.linked.roles[index].id){
+              if(data.linked.supported_roles[i].id === data.linked.roles[index].id){
                 data.linked.roles.splice(index, 1);
               }
             }
