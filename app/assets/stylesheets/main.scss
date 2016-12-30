@@ -16,6 +16,9 @@ $menu-height: 70px;
 
 html {
   font-size: 1vw;
+  @media (max-width:800px){
+    font-size: 2vw;
+  }
 }
 body {
   font-family: $main-font;
@@ -161,13 +164,14 @@ body {
     height: 0;
   }
   h1{
-    font-size: 4.28em;
+    font-size: 3.75em;
+    font-weight: bold;
   }
   h2{
-    font-size: 1.8em;
+    font-size: 1.57em;
   }
   p{
-    font-size: 1.3em;
+    font-size: 1.1em;
   }
 }
 .top-line{
