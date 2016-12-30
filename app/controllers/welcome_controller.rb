@@ -1,8 +1,5 @@
 require 'glassfrog'
 class WelcomeController < ApplicationController
-  def index
-  end
-
   def roles
     gf = GlassFrog.new
     roles = gf.roles
