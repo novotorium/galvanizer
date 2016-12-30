@@ -1,4 +1,4 @@
-(function() {
+function circles() {
   "use strict";
   var svg = d3.select("svg"),
     margin = 20,
@@ -130,4 +130,14 @@
             })).classed("node--hover", hover);
           };
         }
-}());
+}
+circles();
+var id;
+$( window ).on('resize', function() {
+  clearTimeout(id);
+  id = setTimeout(doneResizing, 200);
+});
+function doneResizing(){
+  $("svg").empty();
+  circles();
+}
