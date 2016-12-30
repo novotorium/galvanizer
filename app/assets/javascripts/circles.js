@@ -1,4 +1,5 @@
 (function() {
+  "use strict";
   var svg = d3.select("svg"),
     margin = 20,
       diameter = svg.style("width").slice(0,-2),
@@ -11,7 +12,7 @@
         .padding(2);
 
         d3.json("/circles.json", function(error, data){
-          if(error) throw error;
+          if(error) { throw error; }
           /* CIRCLES dont have a circle defined which is the parent
              they have a supported_role where the circle is defined.
              */
@@ -35,39 +36,16 @@
 
           var clean_data = data.circles.concat(data.linked.roles);
 
-          //Calculate deep of circle
-          function deep(elem, data){
-            if(elem.links.circle === null){
-              return 1;
-            }
-            var parent_circle;
-            for(var i = 0; i < data.length; i++){
-              if(data[i].id === elem.links.circle){
-                parent_circle = data[i];
-                break;
-              }
-            }
-            return 1 + deep(parent_circle, data)
-          }
-
-          clean_data.forEach(function(elem){
-            elem.deep = deep(elem, this)
-          }, clean_data);
-          window.clean_data = clean_data;
-
           var root = d3.stratify()
           .id(function(d) { return d.id; })
           .parentId(function(d) { return d.links.circle; })
-          (clean_data)
+          (clean_data);
 
-          var pack = d3.pack()
-          .size([diameter - margin, diameter - margin])
-          .padding(3);
-          var format = d3.format(",d");
+          d3.format(",d");
 
           var color = ['#286CB3','#1A4675','#112E4D', '#286CB3'];
 
-          function suma(d){
+          function suma(){
             return 1;
           }
 
@@ -77,7 +55,7 @@
           });
 
           function openRole(role){
-            if(role.children) return;
+            if(role.children) { return; }
             d3.event.stopPropagation();
             console.log(role);
           }
@@ -93,9 +71,9 @@
               .style("fill", function(d) {
                 return d.children ? color[ d.depth ] : null;
               })
-              .on("click", function(d) { if (focus !== d) zoom(d), d3.event.stopPropagation(); });
+              .on("click", function(d) { if (focus !== d) { zoom(d), d3.event.stopPropagation(); } });
 
-              var text = g.selectAll("text")
+              g.selectAll("text")
               .data(nodes)
               .enter().append("text")
               .style("fill-opacity", function(d) { return d.parent === root ? 1 : 0; })
@@ -126,7 +104,7 @@
 
                 var transition = d3.transition()
                 .duration(d3.event.altKey ? 7500 : 750)
-                .tween("zoom", function(d) {
+                .tween("zoom", function() {
                   var i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2 + margin]);
                   return function(t) { zoomTo(i(t)); };
                 });
@@ -134,8 +112,8 @@
                 transition.selectAll("text")
                 .filter(function(d) { return d.parent === focus || this.style.display === "inline"; })
                 .style("fill-opacity", function(d) { return d.parent === focus ? 1 : 0; })
-                .on("start", function(d) { if (d.parent === focus) this.style.display = "inline"; })
-                .on("end", function(d) { if (d.parent !== focus) this.style.display = "none"; });
+                .on("start", function(d) { if (d.parent === focus) { this.style.display = "inline"; } })
+                .on("end", function(d) { if (d.parent !== focus) { this.style.display = "none"; } });
               }
 
               function zoomTo(v) {
