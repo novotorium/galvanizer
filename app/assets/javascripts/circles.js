@@ -105,7 +105,9 @@
               .data(function(d) { return d.data.name.split(" "); })
               .enter().append("tspan")
               .attr("x", 0)
-              .attr("y", function(d, i, nodes) { return 13 + (i - nodes.length / 2 - 0.5) * 16; })
+              .attr("y", function(d, i, nodes) {
+                return 1.1 + (i - nodes.length / 2 - 0.5) + 'em';
+              })
               .text(function(d) {return d; });
 
               var node = g.selectAll("circle,text");
