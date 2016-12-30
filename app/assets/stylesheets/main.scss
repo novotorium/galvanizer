@@ -27,14 +27,17 @@ body {
 }
 
 .navbar-brand, #footer > .row > .col-lg-12 > h2{
-  font-size: 2.15em;
+  font-size: 1.88em;
   font-weight: bolder;
 }
 #navbar {
   background-color: $main;
 }
 .navbar{
-  min-height: 4.1em;
+  .container-fluid{
+    padding-top: 0.4em;
+  }
+  min-height: 3.65em;
   margin-bottom: 0px;
   .container-fluid{
     .navbar-header{
@@ -55,7 +58,7 @@ body {
   width: 100%;
 }
 .navbar-default{
-  border:0px;
+  border-bottom:1px solid white;
 }
 .navbar-default, .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
   background-color: $main;
@@ -64,7 +67,7 @@ body {
   color: white;
 }
 .navbar-default .navbar-nav > li > a, #footer > .row > .col-lg-12 > h3{
-  font-size: 1.25em;
+  font-size: 1.1em;
   color: white;
 }
 .header{
@@ -105,10 +108,10 @@ body {
         content: "\f111"; /* UTF-8 Unicode */
       }
     }
-    padding-left: 5.5em;
-    padding-right: 5.5em;
-    padding-top: 7em;
-    padding-bottom: 7em;
+    padding-left: 4.9em;
+    padding-right: 4.9em;
+    padding-top: 6.7em;
+    padding-bottom: 6.7em;
     margin-top: 0px;
     margin-bottom: 0px;
     .button{
@@ -164,6 +167,7 @@ body {
     height: 0;
   }
   h1{
+    margin-bottom: 0.36em;
     font-size: 3.75em;
     font-weight: bold;
   }
