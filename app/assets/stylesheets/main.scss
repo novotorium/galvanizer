@@ -1,10 +1,10 @@
-$main-font: "Montserrat",  sans-serif;
+$main-font: 'Montserrat',  sans-serif;
 
-$main: #286CB3;
-$main-highlight: #A8D6FF;
-$main-shade: #568FC2;
-$secondary: #D9FF71;
-$tertiary: #71FF8D;
+$main: #286cb3;
+$main-highlight: #a8d6ff;
+$main-shade: #568fc2;
+$secondary: #d9ff71;
+$tertiary: #71ff8D;
 
 $dark: #2B2D2E;
 $mid: #4D5456;
@@ -34,12 +34,12 @@ body {
   background-color: $main;
 }
 .navbar{
-  .container-fluid{
-    padding-top: 0.4em;
-  }
   min-height: 3.65em;
   margin-bottom: 0px;
   .container-fluid{
+    padding-left: 2.95em;
+    padding-right: 2.95em;
+    padding-top: 0.4em;
     .navbar-header{
       button{
         border: 0px;
@@ -99,13 +99,13 @@ body {
         width: 1.5em; /* same as padding-left set on li */
       }
       li:nth-child(1):before{
-        content: "\25C6"; /* UTF-8 Unicode */
+        content: '\25C6'; /* UTF-8 Unicode */
       }
       li:nth-child(2):before{
-        content: "\25FC"; /* UTF-8 Unicode */
+        content: '\25FC'; /* UTF-8 Unicode */
       }
       li:nth-child(3):before{
-        content: "\f111"; /* UTF-8 Unicode */
+        content: '\f111'; /* UTF-8 Unicode */
       }
     }
     padding-left: 4.9em;
@@ -129,7 +129,7 @@ body {
     border-bottom: 4em solid transparent;
     border-top: 4em solid transparent;
     bottom: 45%;
-    content: "";
+    content: '';
     position: absolute;
     right: 0%;
     margin-right: -2em;
@@ -141,7 +141,7 @@ body {
     border-bottom: 4em solid transparent;
     border-top: 4em solid transparent;
     bottom: 45%;
-    content: "";
+    content: '';
     position: absolute;
     left: 0%;
     margin-left: -2em;
@@ -159,7 +159,7 @@ body {
     border-right: 4em solid transparent;
     border-left: 4em solid transparent;
     left: 44%;
-    content: "";
+    content: '';
     position: absolute;
     top: 0%;
     margin-top: -2em;
