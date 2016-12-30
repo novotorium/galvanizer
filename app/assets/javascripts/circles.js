@@ -54,10 +54,34 @@ function circles() {
             return -(a.id - b.id);
           });
 
+          function getAccountabilities(role){
+            var ids = role.data.links.accountabilities;
+            function getAccountabilitiesStr(ids, accountabilities){
+              var str = "<ul>";
+              var found = 0;
+              for(var i = 0; i < accountabilities.length; i++){
+                for(var j = 0; j < ids.length; j++){
+                  if(accountabilities[i].id == ids[j]){
+                    str = str + "<li>" + accountabilities[i].description + "</li>";
+                    found++;
+                    break;
+                  }
+                }
+                if(found == ids.length+1){
+                  break;
+                }
+              }
+              return str + "</ul>";
+            }
+            return getAccountabilitiesStr(ids, window.roles.linked.accountabilities);
+          }
           function openRole(role){
             if(role.children) { return; }
             d3.event.stopPropagation();
-            console.log(role);
+            $(".modal-body h1").text(role.data.name)
+            $(".modal-body p:nth(0)").text(role.data.purpose ? role.data.purpose : "")
+            $(".modal-body p:nth(1)").html(getAccountabilities(role));
+            $("#modal").modal('show');
           }
 
           var focus = root,
@@ -132,12 +156,22 @@ function circles() {
         }
 }
 circles();
-var id;
-$( window ).on('resize', function() {
-  clearTimeout(id);
-  id = setTimeout(doneResizing, 200);
-});
-function doneResizing(){
-  $("svg").empty();
-  circles();
-}
+// Prefetching roles where accountabilities data lives.
+(function(){
+  if(!window.roles)
+    {
+      d3.json("/roles.json", function(error, data){
+        if(error) { throw error; }
+        window.roles = data;
+      });
+    }
+    var id;
+    $( window ).on('resize', function() {
+      clearTimeout(id);
+      id = setTimeout(doneResizing, 200);
+    });
+    function doneResizing(){
+      $("svg").empty();
+      circles();
+    }
+})();

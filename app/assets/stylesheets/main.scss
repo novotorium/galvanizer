@@ -102,13 +102,13 @@ body {
         margin-left: -1.5em; /* same as padding-left set on li */
         width: 1.5em; /* same as padding-left set on li */
       }
-      li:nth-child(1):before {
+      li:nth-child(1n+1):before {
         content: '\25c6'; /* utf-8 unicode */
       }
-      li:nth-child(2):before {
+      li:nth-child(2n+2):before {
         content: '\25fc'; /* utf-8 unicode */
       }
-      li:nth-child(3):before {
+      li:nth-child(3n+3):before {
         content: '\f111'; /* utf-8 unicode */
       }
     }
@@ -127,6 +127,10 @@ body {
       position: relative;
       bottom: -1.5em;
     }
+  }
+  .text-modal{
+    @extend .text;
+    padding: 1em 1em 1em 0em;
   }
   .triangle-left:after {
     border-right: 7em solid #0099cc;
@@ -185,4 +189,39 @@ body {
 .top-line {
   border-top: 2px solid white;
   padding-top: 0.2em;
+}
+.top-line-black{
+  @extend .top-line;
+  border-color: black;
+}
+.modal-content{
+  color: black;
+  background: $white;
+  opacity: 1;
+  border-radius: 0px;
+  .modal-header{
+    .close{
+      color: black;
+      font-size: 4em;
+      opacity: 1;
+    }
+    .modal-body{
+      padding-top: 0px;
+      h2{
+        font-weight: bolder;
+      }
+    }
+    .modal-footer{
+      border: 0px;
+      text-align: center;
+    }
+  }
+}
+.btn {
+  color: white;
+  background-color: $main;
+  border: 0;
+  padding: 0.5em 1.6em 0.5em 1.6em;
+  border-radius: 0;
+  font-size: 1.8em;
 }

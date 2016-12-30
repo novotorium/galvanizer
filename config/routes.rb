@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   root 'welcome#index'
   get 'purpose_strategy' => 'welcome#purpose_strategy'
   get 'circles', to: 'welcome#circles'
+  get 'roles', to: 'welcome#roles'
   get 'organization' => 'welcome#organizations'
 end
