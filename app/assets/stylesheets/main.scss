@@ -33,12 +33,14 @@ body {
 }
 
 .navbar {
+  margin-bottom: 0;
   min-height: 3.65em;
-  margin-bottom: 0px;
+
   .container-fluid {
     padding-left: 2.95em;
     padding-right: 2.95em;
-    padding-top: 0.4em;
+    padding-top: .4em;
+
     .navbar-header {
       button {
         border: 0px;
