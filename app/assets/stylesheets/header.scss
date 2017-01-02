@@ -1,0 +1,45 @@
+.secondary-text {
+  color: $white;
+  font-size: 1.1em;
+}
+
+.navbar {
+  margin-bottom: 0;
+  min-height: 3.65em;
+
+  .container-fluid {
+    padding-left: 2.95em;
+    padding-right: 2.95em;
+    padding-top: .4em;
+
+  }
+}
+
+.navbar-header {
+  button {
+    border: 0;
+  }
+}
+
+.header {
+  background-color: $main;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+}
+
+.navbar-default {
+  .navbar-nav > li > a {
+    @extend .secondary-text;
+  }
+  .navbar-toggle .icon-bar {
+    background-color: $white;
+  }
+  border-bottom:1px solid white;
+}
+.navbar-default, .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: $main;
+}
+.navbar-default .navbar-brand, .navbar-default .navbar-brand:hover {
+  color: white;
+}
