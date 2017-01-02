@@ -34,7 +34,7 @@ body {
 
 .index-content.no-background{
   color: black;
-  background-color: rgba(255,255,255,0.9);
+  background-color: rgba(255,255,255,1);
   .text{
     padding-top: 10.5em;
     padding-bottom: 10.3em;
@@ -52,7 +52,7 @@ body {
 }
 [class*=-content] {
   background-color: #262626;
-  opacity: 0.9;
+  opacity: 0.95;
   color: white;
   .no-background{
     background-color: none;
