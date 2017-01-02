@@ -7,6 +7,7 @@ $secondary: #d9ff71;
 $tertiary: #71ff8d;
 
 $dark: #2b2d2e;
+$dark-shade: #262626;
 $mid: #4d5456;
 $light: #a9afb3;
 $white: #fff;
@@ -32,10 +33,17 @@ body {
   font-weight: bolder;
 }
 
+.row.structure-content{
+    background-color: $dark-shade;
+  .text{
+    background-color: none;
+  }
+}
+
 .index-content.no-background{
   color: black;
-  background-color: rgba(255,255,255,1);
   .text{
+    background-color: rgba(255,255,255,1);
     padding-top: 10.5em;
     padding-bottom: 10.3em;
     h1{
@@ -51,7 +59,7 @@ body {
   }
 }
 [class*=-content] {
-  background-color: #262626;
+  background-color: $white;
   opacity: 0.95;
   color: white;
   .no-background{
@@ -65,6 +73,7 @@ body {
     }
   }
   .text {
+    background-color: $dark-shade;
     ul {
       list-style: none;
       li {
@@ -119,6 +128,7 @@ body {
     margin-right: -2em;
     width: 0;
     height: 0;
+    z-index: 1;
   }
   .triangle-right:after {
     border-left: 7em solid #0099cc;
