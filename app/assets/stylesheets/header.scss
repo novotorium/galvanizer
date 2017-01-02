@@ -29,17 +29,25 @@
 }
 
 .navbar-default {
+  border-bottom: 1px solid $white;
+
   .navbar-nav > li > a {
     @extend .secondary-text;
   }
+
   .navbar-toggle .icon-bar {
     background-color: $white;
   }
-  border-bottom:1px solid white;
+
 }
-.navbar-default, .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+
+.navbar-default,
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
   background-color: $main;
 }
-.navbar-default .navbar-brand, .navbar-default .navbar-brand:hover {
+
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:hover {
   color: white;
 }
