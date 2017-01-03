@@ -82,18 +82,19 @@ body {
       }
       li:before {
         color: $main;
-        font-family: verdana;
+        font-family: "Glyphicons Halflings";
         display: inline-block;
         margin-left: -1.5em; /* same as padding-left set on li */
         width: 1.5em; /* same as padding-left set on li */
       }
       li:nth-child(1n+1):before {
-        content: '\25c6'; /* utf-8 unicode */
+        content: '\e072'; /* utf-8 unicode */
       }
       li:nth-child(2n+2):before {
-        content: '\25fc'; /* utf-8 unicode */
+        content: '\e074'; /* utf-8 unicode */
       }
       li:nth-child(3n+3):before {
+        font-family: "FontAwesome";
         content: '\f111'; /* utf-8 unicode */
       }
     }
