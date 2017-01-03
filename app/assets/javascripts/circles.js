@@ -76,7 +76,10 @@ function circles() {
             return getAccountabilitiesStr(ids, window.roles.linked.accountabilities);
           }
           function openRole(role){
-            if(role.children) { return; }
+            if(role.children) {
+              if (focus !== role) { zoom(role), d3.event.stopPropagation(); }
+              return;
+            }
             d3.event.stopPropagation();
             $(".modal-body h1").text(role.data.name)
             $(".modal-body p:nth(0)").text(role.data.purpose ? role.data.purpose : "")
@@ -95,7 +98,7 @@ function circles() {
               .style("fill", function(d) {
                 return d.children ? color[ d.depth ] : null;
               })
-              .on("click", function(d) { if (focus !== d) { zoom(d), d3.event.stopPropagation(); } });
+              .on("click", openRole);
 
               g.selectAll("text")
               .data(nodes)
