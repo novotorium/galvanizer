@@ -115,6 +115,7 @@ body {
     }
   }
   .text-modal{
+    background-color: $white;
     @extend .text;
     padding: 1em 1em 1em 0em;
   }
