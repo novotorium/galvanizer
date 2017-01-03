@@ -124,7 +124,10 @@ body {
     border-right: 7em solid #0099cc;
     border-bottom: 4em solid transparent;
     border-top: 4em solid transparent;
-    bottom: 45%;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
     content: '';
     position: absolute;
     right: 0%;
@@ -137,7 +140,10 @@ body {
     border-left: 7em solid #0099cc;
     border-bottom: 4em solid transparent;
     border-top: 4em solid transparent;
-    bottom: 45%;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
     content: '';
     position: absolute;
     left: 0%;
@@ -155,9 +161,12 @@ body {
     border-top: 7em solid #0099cc;
     border-right: 4em solid transparent;
     border-left: 4em solid transparent;
-    left: 44%;
     content: '';
     position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
     top: 0%;
     margin-top: -2em;
     width: 0;
