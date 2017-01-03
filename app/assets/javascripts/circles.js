@@ -169,7 +169,7 @@ circles();
       window.roles = data;
     });
   }
-  var id, lastWidth, lastHeight;
+  var id, lastWidth = $(".circles").width(), lastHeight = $(".circles").height();
   $( window ).on('resize', function() {
     clearTimeout(id);
     id = setTimeout(doneResizing, 200);
