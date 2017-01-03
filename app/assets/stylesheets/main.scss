@@ -41,7 +41,7 @@ body {
 }
 
 .index-content.no-background{
-  color: black;
+  color: $black;
   .text{
     background-color: rgba(255,255,255,1);
     padding-top: 10.5em;
@@ -61,7 +61,7 @@ body {
 [class*=-content] {
   background-color: $white;
   opacity: 0.95;
-  color: white;
+  color: $white;
   .no-background{
     background-color: none;
   }
@@ -105,7 +105,7 @@ body {
     margin-top: 0px;
     margin-bottom: 0px;
     .button {
-      color: white;
+      color: $white;
       background-color: $main;
       border: 0;
       padding: .6em;
@@ -145,7 +145,7 @@ body {
     height: 0;
   }
   .space {
-    background-color: white;
+    background-color: $white;
   }
   .space.mobile {
     min-height: 20em;
@@ -175,25 +175,25 @@ body {
   }
 }
 .top-line {
-  border-top: 2px solid white;
+  border-top: 2px solid $white;
   padding-top: 0.2em;
 }
 .top-line-black{
   @extend .top-line;
-  border-color: black;
+  border-color: $black;
 }
 @media screen and (min-width: 768px) {
   .modal-dialog  {width:60%;}
 }
 .modal-content{
-  color: black;
+  color: $black;
   background: $white;
   opacity: 1;
   border-radius: 0px;
   .modal-header{
     border: 0;
     .close{
-      color: black;
+      color: $black;
       font-size: 4em;
       opacity: 1;
     }
@@ -211,7 +211,7 @@ body {
   }
 }
 .btn.btn-default, .btn.btn-default:hover, .btn.btn-default:active, .btn.btn-default:focus{
-  color: white;
+  color: $white;
   background-color: $main;
   border: 0;
   padding: 0.5em 1.6em 0.5em 1.6em;
