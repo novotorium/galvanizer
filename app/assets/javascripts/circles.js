@@ -166,14 +166,15 @@ circles();
       window.roles = data;
     });
   }
-  var id, lastSize;
+  var id, lastWidth, lastHeight;
   $( window ).on('resize', function() {
     clearTimeout(id);
-    lastSize = [ $(".circles").width(), $(".circles").height() ];
+    lastWidth = $(".circles").width();
+    lastHeight = $(".circles").height();
     id = setTimeout(doneResizing, 200);
   });
   function doneResizing(){
-    if(lastSize === [ $(".circles").width(), $(".circles").height() ] ){
+    if(lastWidth === $(".circles").width() && lastHeight === $(".circles").height()){
       // Size didn't change we dont need to redraw.
       return;
     }
