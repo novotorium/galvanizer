@@ -169,8 +169,6 @@ circles();
   var id, lastWidth, lastHeight;
   $( window ).on('resize', function() {
     clearTimeout(id);
-    lastWidth = $(".circles").width();
-    lastHeight = $(".circles").height();
     id = setTimeout(doneResizing, 200);
   });
   function doneResizing(){
@@ -178,6 +176,9 @@ circles();
       // Size didn't change we dont need to redraw.
       return;
     }
+    lastWidth = $(".circles").width();
+    lastHeight = $(".circles").height();
+
     $("svg").empty();
     circles();
   }

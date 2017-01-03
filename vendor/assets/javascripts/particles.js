@@ -13,7 +13,11 @@ var canvas = document.querySelector("canvas.animated"),
 
     canvas.width  = container.outerWidth();
     canvas.height = container.outerHeight();
-    $("canvas.animated").css({top: container.position().top, left: container.position().left });
+    $("canvas.animated").css({
+      width: '100%',
+      top: container.position().top,
+      left: container.position().left
+    });
 
 var width = canvas.width,
     height = canvas.height
