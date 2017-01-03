@@ -166,17 +166,12 @@ circles();
       window.roles = data;
     });
   }
-  var id, lastSize;
+  var id;
   $( window ).on('resize', function() {
     clearTimeout(id);
-    lastSize = [ $(".circles").width(), $(".circles").height() ];
     id = setTimeout(doneResizing, 200);
   });
   function doneResizing(){
-    if(lastSize === [ $(".circles").width(), $(".circles").height() ] ){
-      // Size didn't change we dont need to redraw.
-      return;
-    }
     $("svg").empty();
     circles();
   }
