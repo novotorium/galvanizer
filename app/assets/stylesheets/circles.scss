@@ -10,6 +10,10 @@
 .node--leaf {
   fill: white;
 }
+.unfilled, .unfilled:hover {
+  stroke: cyan;
+  stroke-width: 1.5px;
+}
 
 .label {
   font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif;

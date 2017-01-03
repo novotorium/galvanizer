@@ -95,6 +95,12 @@ function circles() {
               .data(nodes)
               .enter().append("circle")
               .attr("class", function(d) { return d.parent ? d.children ? "node" : "node node--leaf" : "node node--root"; })
+              .classed("unfilled", function(d) {
+                if(typeof(d.data.links.people) !== 'undefined' &&
+                   d.data.links.people.length === 0){
+                  return true;
+                }
+              })
               .style("fill", function(d) {
                 return d.children ? color[ d.depth ] : null;
               })
