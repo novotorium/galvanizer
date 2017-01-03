@@ -9,8 +9,8 @@ var canvas = document.querySelector("canvas.animated"),
     minDistance2 = minDistance * minDistance,
     maxDistance2 = maxDistance * maxDistance;
 
-    canvas.width  = window.innerWidth;
-    canvas.height = window.innerHeight;
+    canvas.width  = $("body > .container-fluid").width();
+    canvas.height = $("body > .container-fluid").height();
 
 var width = canvas.width,
     height = canvas.height
