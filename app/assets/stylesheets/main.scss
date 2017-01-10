@@ -1,67 +1,230 @@
-$main-font: "Montserrat",  sans-serif;
+$main-font: 'montserrat',  sans-serif;
 
-$main: #286CB3;
-$main-highlight: #A8D6FF;
-$main-shade: #568FC2;
-$secondary: #D9FF71;
-$tertiary: #71FF8D;
+$main: #286cb3;
+$main-highlight: #a8d6ff;
+$main-shade: #568fc2;
+$secondary: #d9ff71;
+$tertiary: #71ff8d;
 
-$dark: #2B2D2E;
-$mid: #4D5456;
-$light: #A9AFB3;
-$white: #FFFFFF;
-$overlay: #000000;
+$dark: #2b2d2e;
+$dark-shade: #262626;
+$mid: #4d5456;
+$light: #a9afb3;
+$white: #fff;
+$black: #000;
+$overlay: #000;
 
 $menu-height: 70px;
 
-body {
-  font-family: $main-font;
-  color: $dark;
-  font-size: 1.6vmin;
+html {
+  font-size: 1vw;
+  @media (max-width: 800px) {
+    font-size: 2vw;
+  }
 }
 
-.navbar-brand, #footer > .row > .col-lg-12 > h2{
-  font-size: 2.15em;
+body {
+  color: $dark;
+  font-family: $main-font;
+  font-size: 1em;
+}
+
+.primary-text {
+  font-size: 1.88em;
   font-weight: bolder;
 }
-#navbar {
-  background-color: $main;
+
+.row.structure-content{
+    background-color: $dark-shade;
+  .text{
+    background-color: none;
+  }
 }
-.navbar{
-  min-height: 4.1em;
-  margin-bottom: 0px;
-  .container-fluid{
-    .navbar-header{
-      button{
-        border: 0px;
-        span.icon-bar {
-          background-color: white;
-        }
-        &:hover{
-          background-color: $main;
-        }
+
+.index-content.no-background{
+  color: $black;
+  .text{
+    background-color: rgba(255,255,255,1);
+    padding-top: 10.5em;
+    padding-bottom: 10.3em;
+    h1{
+      padding-bottom: 0.4em;
+    }
+    ul{
+      padding-bottom: 3.5em;
+      li {
+        font-size: 1.6em;
+        text-align: left;
       }
     }
   }
 }
-.header{
+[class*=-content] {
+  background-color: $white;
+  opacity: 0.95;
+  color: $white;
+  .no-background{
+    background-color: none;
+  }
+  .circles {
+    padding-right: 0px;
+    padding-left: 0px;
+    tspan {
+      font-size: 1em;
+    }
+  }
+  .text {
+    background-color: $dark-shade;
+    ul {
+      list-style: none;
+      li {
+        padding-left: 1.5em;
+        padding-bottom: 1em;
+      }
+      li:before {
+        color: $main;
+        font-family: "Glyphicons Halflings";
+        display: inline-block;
+        margin-left: -1.5em; /* same as padding-left set on li */
+        width: 1.5em; /* same as padding-left set on li */
+      }
+      li:nth-child(1n+1):before {
+        content: '\e072'; /* utf-8 unicode */
+      }
+      li:nth-child(2n+2):before {
+        content: '\e074'; /* utf-8 unicode */
+      }
+      li:nth-child(3n+3):before {
+        font-family: "FontAwesome";
+        content: '\f111'; /* utf-8 unicode */
+      }
+    }
+    padding-left: 4.9em;
+    padding-right: 4.9em;
+    padding-top: 6.7em;
+    padding-bottom: 6.7em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    .button {
+      color: $white;
+      background-color: $main;
+      border: 0;
+      padding: .6em;
+      font-size: 1.8em;
+      position: relative;
+      bottom: -1.5em;
+    }
+  }
+  .text-modal{
+    background-color: $white;
+    @extend .text;
+    padding: 1em 1em 1em 0em;
+  }
+  .triangle-left:after {
+    border-right: 7em solid #0099cc;
+    border-bottom: 4em solid transparent;
+    border-top: 4em solid transparent;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    content: '';
+    position: absolute;
+    right: 0%;
+    margin-right: -2em;
+    width: 0;
+    height: 0;
+    z-index: 1;
+  }
+  .triangle-right:after {
+    border-left: 7em solid #0099cc;
+    border-bottom: 4em solid transparent;
+    border-top: 4em solid transparent;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    content: '';
+    position: absolute;
+    left: 0%;
+    margin-left: -2em;
+    width: 0;
+    height: 0;
+  }
+  .space {
+    background-color: $white;
+  }
+  .space.mobile {
+    min-height: 10em;
+  }
+  .triangle-bottom:after {
+    border-top: 7em solid #0099cc;
+    border-right: 4em solid transparent;
+    border-left: 4em solid transparent;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0%;
+    margin-top: -2em;
+    width: 0;
+    height: 0;
+  }
+  h1 {
+    margin-bottom: 0.36em;
+    font-size: 3.75em;
+    font-weight: bold;
+  }
+  h2 {
+    font-size: 1.57em;
+  }
+  p {
+    font-size: 1.1em;
+  }
+}
+.top-line {
+  border-top: 2px solid $white;
+  padding-top: 0.2em;
+}
+.top-line-black{
+  @extend .top-line;
+  border-color: $black;
+}
+@media screen and (min-width: 768px) {
+  .modal-dialog  {width:60%;}
+}
+.modal-content{
+  color: $black;
+  background: $white;
+  opacity: 1;
+  border-radius: 0px;
+  .modal-header{
+    border: 0;
+    .close{
+      color: $black;
+      font-size: 4em;
+      opacity: 1;
+    }
+  }
+  .modal-body{
+    padding: 0em 3em 0em 3em;
+    h2{
+      font-weight: bolder;
+    }
+  }
+  .modal-footer{
+    border: 0px;
+    text-align: center;
+    padding-bottom: 5em;
+  }
+}
+.btn.btn-default, .btn.btn-default:hover, .btn.btn-default:active, .btn.btn-default:focus{
+  color: $white;
   background-color: $main;
-  width: 100%;
-}
-.navbar-default{
-  border:0px;
-}
-.navbar-default, .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-  background-color: $main;
-}
-.navbar-default .navbar-brand, .navbar-default .navbar-brand:hover {
-  color: white;
-}
-.navbar-default .navbar-nav > li > a, #footer > .row > .col-lg-12 > h3{
-  font-size: 1.25em;
-  color: white;
-}
-.header{
-  margin-left: 0px;
-  margin-right: 0px;
+  border: 0;
+  padding: 0.5em 1.6em 0.5em 1.6em;
+  border-radius: 0;
+  font-size: 1.8em;
 }

@@ -1,12 +1,35 @@
 .row.structure-content
-  .col-lg-6.structure-text
-    %h1 Starting Structure
-    %h3 Scelerisque condimentum eu vestibulum quis vestibulum lobortis mi eu nisl fusce condimentum
+  .col-lg-6.text
+    %h1.top-line Starting Structure
+    %h2 Scelerisque condimentum eu vestibulum quis vestibulum lobortis mi eu nisl fusce condimentum
     %br
     %br
     %br
     %p Scelerisque ad vitae a adipiscing dictumst justo suspendisse ut hac ullamcorper tristique sodales nec parturient est taciti proin euismod a condimentum. Nunc adipiscing erat diam mollis a elit cras dis commodo ut consectetur consectetur a parturient. Curabitur nulla in odio etiam in condimentum cursus fermentum a parturient aptent sociosqu vestibulum.
-  .col-lg-6.structure-graph
-    %a{:href => "https://www.glassfrog.com"}
-      = image_tag 'roles-circle.png', class: 'img-responsive'
-      
+  .col-lg-6.circles.text-center
+    %svg{ width: '100%', height: '100%' }
+#modal.modal.fade{:role => "dialog"}
+  .modal-dialog
+    .modal-content
+      .modal-header
+        %button.close{"data-dismiss" => "modal", :type => "button"} ×
+        %h4.modal-title &nbsp;
+      .modal-body
+        %h1.top-line-black Role
+        .row
+          .col-lg-12
+            %h2 Purpose
+            %p
+              Nunc adipiscing erat diam mollis a elit cras dis commodo ut consectetur consectetur a parturient.
+          .col-lg-12
+            %h2 Accountabilities
+            %p.text-modal
+              Nunc adipiscing erat diam mollis a elit cras dis commodo ut consectetur consectetur a parturient.
+        .row{ style: 'display: none' }
+          .col-lg-12
+            = render partial: "typeform"
+      .modal-footer
+        %button#join.btn.btn-default{:type => "button"} Join Now
+%script{ src: "https://d3js.org/d3.v4.js" }
+= javascript_include_tag 'circles.js'
+

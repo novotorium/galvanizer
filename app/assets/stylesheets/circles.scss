@@ -1,0 +1,32 @@
+.node {
+  cursor: pointer;
+}
+
+.node:hover {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.node--leaf {
+  fill: white;
+}
+.unfilled, .unfilled:hover {
+  stroke: cyan;
+  stroke-width: 1.5px;
+}
+
+.label {
+  font: 11px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-anchor: middle;
+  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, -1px 0 0 #fff, 0 -1px 0 #fff;
+}
+
+.label,
+.node--root,
+.node--leaf {
+  //pointer-events: none;
+}
+g > text > tspan {
+  text-anchor: middle;
+  cursor: pointer;
+}

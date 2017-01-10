@@ -1,6 +1,9 @@
 require 'glassfrog'
 class WelcomeController < ApplicationController
-  def index
+  def roles
+    gf = GlassFrog.new
+    roles = gf.roles
+    render plain: roles.to_json
   end
 
   def circles
