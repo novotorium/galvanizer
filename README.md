@@ -1,5 +1,8 @@
 # README
 
+
+https://github.com/novotorium/galvanizer/wiki/Deployment-instructions
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
