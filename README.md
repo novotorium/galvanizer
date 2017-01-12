@@ -1,6 +1,12 @@
 # README
 
+Production URL
+http://http://galvanizer.novotorium.com/
 
+Staging URL 
+https://galvanizer-staging.herokuapp.com/
+
+Deployment instructions:
 https://github.com/novotorium/galvanizer/wiki/Deployment-instructions
 
 This README would normally document whatever steps are necessary to get the
