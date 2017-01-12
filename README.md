@@ -1,7 +1,7 @@
 # README
 
 Production URL
-http://http://galvanizer.novotorium.com/
+http://galvanizer.novotorium.com/
 
 Staging URL 
 https://galvanizer-staging.herokuapp.com/
