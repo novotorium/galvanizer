@@ -1,0 +1,16 @@
+defaults: &defaults
+
+development:
+  <<: *defaults
+  google_analytics_tracking_id: 'UA-90310302-2'
+
+test:
+  <<: *defaults
+
+staging:
+  <<: *defaults
+  google_analytics_tracking_id: 'UA-90310302-2'
+
+production:
+  <<: *defaults
+  google_analytics_tracking_id: 'UA-90310302-1'
