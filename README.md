@@ -9,6 +9,9 @@ https://galvanizer-staging.herokuapp.com/
 Deployment instructions:
 https://github.com/novotorium/galvanizer/wiki/Deployment-instructions
 
+Set your GlassFrog API Key to see circles in your local env.
+https://github.com/novotorium/galvanizer/wiki/GlassFrog-API-Library-Usage
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
