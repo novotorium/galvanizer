@@ -84,6 +84,13 @@ function circles() {
             $(".modal-body h1").text(role.data.name)
             $(".modal-body p:nth(0)").text(role.data.purpose ? role.data.purpose : "")
             $(".modal-body p:nth(1)").html(getAccountabilities(role));
+
+            $("button#join").hide();
+            if(typeof(role.data.links.people) !== 'undefined' &&
+               role.data.links.people.length === 0){
+              $("button#join").show();
+            }
+
             $("#modal").modal('show');
 
             ga('send', 'event', 'role', 'zoom', role.data.name);

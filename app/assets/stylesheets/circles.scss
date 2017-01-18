@@ -10,9 +10,17 @@
 .node--leaf {
   fill: white;
 }
+
 .unfilled, .unfilled:hover {
   stroke: cyan;
   stroke-width: 1.5px;
+  animation: anmcircle 1.5s cubic-bezier(0.46, 0.03, 0.52, 0.96) infinite;
+}
+
+@keyframes anmcircle {
+  0% {stroke-width: 0}
+  80% {stroke-width: 6;stroke-opacity: 1}
+  100% {stroke-width: 8;stroke-opacity: 0}
 }
 
 .label {
