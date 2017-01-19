@@ -92,6 +92,8 @@ function circles() {
             }
 
             $("#modal").modal('show');
+
+            ga('send', 'event', 'role', 'zoom', role.data.name);
           }
 
           var focus = root,
@@ -141,6 +143,8 @@ function circles() {
 
               function zoom(d) {
                 var focus0 = focus; focus = d;
+                var label = focus0.data.name + ' to ' + focus.data.name;
+                ga('send', 'event', 'role', 'zoom', label);
 
                 var transition = d3.transition()
                 .duration(d3.event.altKey ? 7500 : 750)
