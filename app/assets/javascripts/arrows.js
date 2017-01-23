@@ -6,4 +6,4 @@ function parallax() {
   styles.addRule(".triangle-right:after", "bottom:"+ num +" !important;");
   styles.addRule(".triangle-bottom:after", "bottom:"+ num2 +" !important;");
 }
-window.addEventListener("scroll",parallax,false);
+window.addEventListener("scroll", parallax, false);
