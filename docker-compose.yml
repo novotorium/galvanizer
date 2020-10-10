@@ -1,0 +1,10 @@
+services:
+  web:
+    build: .
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - .:/application
+    ports:
+      - "3000:3000"
+    sysctls:
+      net.ipv6.conf.all.disable_ipv6: 0
