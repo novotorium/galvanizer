@@ -1,3 +1,21 @@
+# DOCKER COMMANDS
+
+UPDATE GEMS
+```bash
+docker-compose run web bundle
+```
+
+BUILD CONTAINER
+```bash
+docker-compose build
+```
+
+START RAILS SERVER
+```bash
+docker-compose up
+```
+
+
 # README
 
 Production URL
