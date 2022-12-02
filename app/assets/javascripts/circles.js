@@ -6,18 +6,16 @@ function circles() {
     g = svg.append("g").attr("transform", "translate(" + diameter / 2 + "," + diameter / 2 + ")");
   svg.attr('height', diameter);
 
-
   var pack = d3.pack()
     .size([diameter - margin, diameter - margin])
     .padding(2);
 
   d3.json("/circles.json", function (error, data) {
     if (error) { throw error; }
-    /* CIRCLES dont have a circle defined which is the parent
-       they have a supported_role where the circle is defined.
-       */
+    // CIRCLES dont have a circle defined which is the parent
+    // they have a supported_role where the circle is defined.
     data.circles.forEach(function (d) {
-      data.linked.supported_roles?.forEach(function (e) {
+      (data.linked.supported_roles || []).forEach(function (e) {
         if (this.links.supported_role === e.id) {
           this.links.circle = e.links.circle;
         }
@@ -175,6 +173,7 @@ function circles() {
   }
 }
 circles();
+
 // Prefetching roles where accountabilities data lives.
 (function () {
   //Prefetch accountabilities
