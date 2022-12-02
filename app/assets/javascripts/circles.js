@@ -19,8 +19,8 @@ function circles() {
     // they have a supported_role where the circle is defined.
     data.circles.forEach(function (d) {
       data.linked.supported_roles.forEach(function (e) {
-        if (d.links.supported_role === e.id) {
-          d.links.circle = e.links.circle;
+        if (this.links.supported_role === e.id) {
+          this.links.circle = e.links.circle;
         }
       }, d);
     }, data);
