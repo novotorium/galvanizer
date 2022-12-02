@@ -17,12 +17,12 @@ function circles() {
 
     // CIRCLES dont have a circle defined which is the parent
     // they have a supported_role where the circle is defined.
-    data.circles.forEach(function (d) {
-      data.linked.supported_roles.forEach(function (e) {
-        if (this.links.supported_role === e.id) {
-          this.links.circle = e.links.circle;
+    data.circles.forEach(function (circle) {
+      data.linked.supported_roles.forEach(function (supported) {
+        if (circle.links.supported_role === supported.id) {
+          circle.links.circle = supported.links.circle;
         }
-      }, d);
+      }, circle);
     }, data);
 
     // Delete repeated roles
@@ -38,7 +38,7 @@ function circles() {
 
     var root = d3.stratify()
       .id(function (d) { return d.id; })
-      .parentId(function (d) { return d.links.circle; })
+      .parentId(function (d) { return d.links.circle || 2104; })
       (clean_data);
 
     d3.format(",d");
