@@ -13,16 +13,17 @@ function circles() {
   d3.json("/circles.json", function (error, data) {
     if (error) { throw error; }
 
-    data.linked.supported_roles || (data.linked.supported_roles = data.circles);
+    // data.linked.supported_roles || (data.linked.supported_roles = data.circles);
+    data.linked.supported_roles || (data.linked.supported_roles = []);
 
     // CIRCLES dont have a circle defined which is the parent
     // they have a supported_role where the circle is defined.
-    data.circles.forEach(function (circle) {
-      data.linked.supported_roles.forEach(function (supported) {
-        if (circle.links.supported_role === supported.id) {
-          circle.links.circle = supported.links.circle;
+    data.circles.forEach(function (c) {
+      data.linked.supported_roles.forEach(function (s) {
+        if (this.links.supported_role === s.id) {
+          this.links.circle = s.links.circle;
         }
-      }, circle);
+      }, c);
     }, data);
 
     // Delete repeated roles
@@ -38,7 +39,7 @@ function circles() {
 
     var root = d3.stratify()
       .id(function (d) { return d.id; })
-      .parentId(function (d) { return d.links.circle || 2104; })
+      .parentId(function (d) { return d.links.circle; })
       (clean_data);
 
     d3.format(",d");
