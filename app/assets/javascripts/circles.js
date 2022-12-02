@@ -13,7 +13,7 @@ function circles() {
   d3.json("/circles.json", function (error, data) {
     if (error) { throw error; }
 
-    data.linked.supported_roles ||= [];
+    data.linked.supported_roles || (data.linked.supported_roles = []);
 
     // CIRCLES dont have a circle defined which is the parent
     // they have a supported_role where the circle is defined.
